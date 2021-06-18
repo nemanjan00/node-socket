@@ -9,7 +9,7 @@ module.exports = (...args) => {
 			socket._ws = ws;
 
 			setTimeout(() => {
-				socket_events.emit("open");
+				socket._events.emit("open");
 			});
 		},
 
