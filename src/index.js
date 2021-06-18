@@ -19,8 +19,9 @@ module.exports = (...args) => {
 		on: (...args) => {
 			if(args[0] === "message") {
 				const originalHandler = args[1];
+
 				args[1] = (data) => {
-					originalHandler(JSON.parse(data));
+					originalHandler(JSON.parse(message.data || data));
 				};
 			}
 
