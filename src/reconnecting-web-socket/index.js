@@ -5,6 +5,8 @@ module.exports = (...args) => {
 
 		_init: (ws) => {
 			socket._ws = ws;
+
+			return socket;
 		},
 
 		send: (...args) => {

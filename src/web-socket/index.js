@@ -13,6 +13,8 @@ module.exports = (...args) => {
 			setTimeout(() => {
 				socket._events.emit("open");
 			});
+
+			return socket;
 		},
 
 		send: (...args) => {
