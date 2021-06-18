@@ -8,6 +8,8 @@ module.exports = (...args) => {
 		_init: (ws) => {
 			socket._ws = ws;
 
+			socket._events = new events();
+
 			setTimeout(() => {
 				socket._events.emit("open");
 			});
