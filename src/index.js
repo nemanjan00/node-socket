@@ -21,7 +21,7 @@ module.exports = (...args) => {
 				const originalHandler = args[1];
 
 				args[1] = (data) => {
-					originalHandler(JSON.parse(message.data || data));
+					originalHandler(JSON.parse(data));
 				};
 			}
 
